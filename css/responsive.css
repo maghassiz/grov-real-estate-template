@@ -1,0 +1,439 @@
+/* ==========================================================================
+   Tablet — max-width: 1024px
+   ========================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --container-pad: 40px;
+    --fs-h1: 56px;
+    --fs-h2: 48px;
+    --fs-h3: 40px;
+    --fs-h4: 36px;
+    --fs-h5: 28px;
+  }
+
+  /* ---- Nav: hamburger takes over ---- */
+  .nav__drawer {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-cream);
+    padding-inline: var(--container-pad);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    z-index: 90;
+  }
+
+  .nav__menu,
+  .nav__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .nav__actions {
+    padding-block: var(--space-lg);
+  }
+
+  .site-header[data-nav-open="true"] .nav__drawer {
+    max-height: 520px;
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+
+  .nav__item {
+    width: 100%;
+    padding-block: var(--space-md);
+    border-bottom: 1px solid var(--color-ink-08);
+    justify-content: space-between;
+  }
+
+  .nav__actions .btn {
+    width: 100%;
+  }
+
+  .nav__actions .btn__label {
+    flex: 1 1 auto;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  /* ---- Hero ---- */
+  .hero__frame {
+    height: 620px;
+  }
+
+  .hero__title {
+    top: 80px;
+    white-space: normal;
+    width: 90%;
+  }
+
+  .hero__cta {
+    top: auto;
+    bottom: 220px;
+  }
+
+  .hero__thumb {
+    width: 180px;
+    height: 100px;
+    left: 32px;
+    bottom: 32px;
+  }
+
+  .hero__caption {
+    width: calc(100% - 64px);
+    right: 32px;
+    bottom: 32px;
+  }
+
+  /* ---- Best collection ---- */
+  .best-collection__row {
+    flex-direction: column;
+  }
+
+  .best-collection__row-item--narrow {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .best-collection__row img,
+  .best-collection__row-item--narrow img {
+    height: 400px;
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .best-collection__heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* ---- Partners ---- */
+  .partners__divider {
+    display: none;
+  }
+
+  /* ---- Testimonials ---- */
+  .testimonials__body,
+  .testimonials__content {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  /* ---- Featured ---- */
+  .featured__heading-block {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .featured__heading-group {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .featured__floating-img {
+    display: none;
+  }
+
+  .featured__item-title {
+    width: auto;
+    flex: 1 1 200px;
+  }
+
+  /* ---- Insights ---- */
+  .insights {
+    flex-direction: column;
+  }
+
+  /* ---- FAQ ---- */
+  .faq {
+    flex-direction: column;
+  }
+
+  .faq__list {
+    max-width: 100%;
+  }
+
+  /* ---- Footer ---- */
+  .footer-card__illustration {
+    display: none;
+  }
+
+  /* ---- Agent Hero ---- */
+  .agent-hero__frame {
+    min-height: 380px;
+  }
+
+  /* ---- Our Values ---- */
+  .values__item {
+    gap: var(--space-4xl);
+  }
+
+  .values__item-title {
+    flex-basis: auto;
+  }
+
+  /* ---- Manifesto ---- */
+  .manifesto {
+    gap: 80px;
+  }
+
+  .manifesto__body {
+    max-width: 100%;
+  }
+
+  /* ---- Team ---- */
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .agent-card--placeholder {
+    display: none;
+  }
+
+  /* ---- House Hero ---- */
+  .house-hero__frame {
+    min-height: 380px;
+  }
+
+  /* ---- Filters ---- */
+  .filters__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters__controls {
+    width: 100%;
+  }
+
+  .filters__pill {
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
+  /* ---- Listing grid ---- */
+  .listing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Mobile — max-width: 768px
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --container-pad: 20px;
+    --fs-h1: 40px;
+    --fs-h2: 36px;
+    --fs-h3: 32px;
+    --fs-h4: 28px;
+    --fs-h5: 24px;
+    --fs-h6: 20px;
+    --fs-body-lg: 16px;
+    --space-7xl: 48px;
+    --space-8xl: 56px;
+  }
+
+  .about,
+  .best-collection,
+  .partners,
+  .testimonials,
+  .collection,
+  .featured,
+  .insights {
+    padding-inline: var(--container-pad);
+  }
+
+  .faq {
+    padding: var(--container-pad);
+  }
+
+  /* ---- Hero ---- */
+  .hero__frame {
+    margin-inline: var(--space-md);
+    height: 520px;
+  }
+
+  .hero__title {
+    top: 24px;
+  }
+
+  .hero__cta {
+    bottom: 160px;
+  }
+
+  .hero__thumb {
+    display: none;
+  }
+
+  .hero__caption {
+    left: 24px;
+    right: 24px;
+    width: auto;
+    bottom: 24px;
+  }
+
+  /* ---- About ---- */
+  .about__inner {
+    gap: var(--space-xl);
+  }
+
+  /* ---- Best collection ---- */
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-card__photo {
+    height: 340px;
+  }
+
+  .property-card__tag {
+    top: 120px;
+    font-size: var(--fs-h4);
+  }
+
+  /* ---- Collection cards ---- */
+  .collection-card {
+    flex: 0 0 82vw;
+  }
+
+  .collection-card__photo {
+    height: 380px;
+  }
+
+  /* ---- Testimonials ---- */
+  .testimonials__top {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .testimonials__quote {
+    font-size: var(--fs-h3);
+  }
+
+  .testimonials__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  /* ---- Featured ---- */
+  .featured__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .featured__item-arrow {
+    display: none;
+  }
+
+  /* ---- Insights ---- */
+  .insights__cards {
+    flex-direction: column;
+  }
+
+  .article-list__item {
+    gap: var(--space-lg);
+  }
+
+  /* ---- FAQ ---- */
+  .faq-item__question {
+    font-size: var(--fs-body-lg);
+  }
+
+  /* ---- Footer ---- */
+  .site-footer {
+    height: 640px;
+  }
+
+  .footer-card {
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+    width: calc(100vw - 32px);
+  }
+
+  .footer-card__top {
+    gap: var(--space-3xl);
+  }
+
+  .footer-card__contact {
+    gap: var(--space-xl);
+  }
+
+  .site-footer__bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: calc(100% - 32px);
+  }
+
+  /* ---- Agent Hero ---- */
+  .agent-hero__frame {
+    min-height: 300px;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  /* ---- Our Values ---- */
+  .values__item {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  /* ---- Manifesto ---- */
+  .manifesto {
+    gap: 48px;
+  }
+
+  .manifesto__quote {
+    line-height: var(--lh-heading);
+  }
+
+  /* ---- Team ---- */
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team__nav {
+    justify-content: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .team__counter {
+    order: 1;
+  }
+
+  .team__controls {
+    margin-left: auto;
+  }
+
+  /* ---- House Hero ---- */
+  .house-hero__frame {
+    min-height: 300px;
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  /* ---- Listing grid ---- */
+  .listing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Pagination ---- */
+  .listings-pagination__pages {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .listings-pagination__btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
