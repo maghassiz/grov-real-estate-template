@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Our Values
+   ========================================================================== */
+.values {
+  background-color: var(--color-warm-gray);
+  padding: 50px var(--container-pad) var(--space-7xl);
+}
+
+.values__row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4xl);
+  flex-wrap: wrap;
+}
+
+.values__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7xl);
+  width: 100%;
+  max-width: 800px;
+}
+
+.values__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+}
+
+.values__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.values__item {
+  display: flex;
+  gap: var(--space-8xl);
+  border-top: 1px solid var(--color-ink-08);
+  padding-top: 34px;
+  flex-wrap: wrap;
+}
+
+.values__item + .values__item {
+  margin-top: 34px;
+}
+
+.values__item-title {
+  flex: 0 0 90px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.values__item-desc {
+  flex: 1 1 320px;
+  font-size: var(--fs-body-lg);
+}
+

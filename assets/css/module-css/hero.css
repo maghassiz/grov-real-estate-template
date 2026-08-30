@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  background-color: var(--color-cream);
+  padding-bottom: var(--space-lg);
+}
+
+.hero__frame {
+  position: relative;
+  margin-inline: 20px;
+  height: 800px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--color-overlay-from), var(--color-overlay-to));
+}
+
+.hero__title {
+  position: absolute;
+  top: calc(50% - 188px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-heading);
+  color: var(--color-cream);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hero__cta {
+  position: absolute;
+  left: 50%;
+  top: 521px;
+  transform: translateX(-50%);
+}
+
+.hero__thumb {
+  position: absolute;
+  left: 48px;
+  bottom: 48px;
+  width: 249px;
+  height: 140px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.hero__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__caption {
+  position: absolute;
+  right: 48px;
+  bottom: 48px;
+  width: 442px;
+  font-size: var(--fs-body);
+  line-height: 22px;
+  color: var(--color-cream);
+}
+

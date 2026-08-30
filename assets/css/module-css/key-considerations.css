@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Key Considerations
+   ========================================================================== */
+.considerations {
+  background-color: var(--color-off-white);
+  padding: var(--space-6xl);
+  display: flex;
+  gap: var(--space-4xl);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.considerations__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  flex-shrink: 0;
+  max-width: 300px;
+}
+
+.considerations__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+}
+
+.considerations__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+}
+
+.considerations__divider {
+  height: 1px;
+  background-color: var(--color-ink-08);
+}
+
+.consideration-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  padding-block: var(--space-xl);
+}
+
+.consideration-item__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h5);
+  margin-bottom: var(--space-sm);
+}
+
+.consideration-item__desc {
+  font-size: var(--fs-body-lg);
+  color: var(--color-ink-68);
+}
+
+.consideration-item__icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+

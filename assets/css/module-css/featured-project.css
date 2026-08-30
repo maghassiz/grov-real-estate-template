@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Featured Project
+   ========================================================================== */
+.featured {
+  background-color: var(--color-ink);
+  color: var(--color-taupe);
+  padding: 68px var(--container-pad) var(--space-7xl);
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.featured__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  border-top: 1px solid rgba(252, 247, 236, 0.15);
+  padding-top: var(--space-2xl);
+}
+
+.featured__heading-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4xl);
+  flex-wrap: wrap;
+}
+
+.featured__heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  margin-left: auto;
+  max-width: 661px;
+}
+
+.featured__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-cream);
+}
+
+.featured__listing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.featured__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  padding-block: var(--space-xs);
+  border-bottom: 1px solid rgba(212, 206, 198, 0.15);
+  flex-wrap: wrap;
+}
+
+.featured__item-title {
+  font-size: 28px;
+  color: rgba(212, 206, 198, 0.25);
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.featured__item--active .featured__item-title {
+  color: var(--color-taupe);
+}
+
+.featured__item-tags {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-taupe-20);
+  font-family: var(--font-mono);
+  font-size: var(--fs-body-sm);
+  text-transform: uppercase;
+  color: var(--color-taupe-48);
+  white-space: nowrap;
+}
+
+.featured__item--active .tag-pill {
+  color: var(--color-taupe);
+}
+
+.featured__item-arrow {
+  width: 15px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.featured__floating-img {
+  position: absolute;
+  left: 222px;
+  top: -48px;
+  width: 300px;
+  height: 370px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  pointer-events: none;
+}
+

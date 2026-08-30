@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Team (Our Agents)
+   ========================================================================== */
+.team {
+  background-color: var(--color-warm-gray);
+  padding: var(--space-7xl) var(--container-pad);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.eyebrow--upper {
+  text-transform: uppercase;
+}
+
+.team__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  border-top: 1px solid var(--color-ink-08);
+  padding-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.team__counter {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+}
+
+.team__controls {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.team__controls .btn--outline:first-child img {
+  transform: rotate(180deg);
+}
+
+.team__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: 48px;
+  text-align: center;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl) var(--space-xl);
+  row-gap: var(--space-6xl);
+}
+
+.agent-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.agent-card--placeholder {
+  visibility: hidden;
+}
+
+.agent-card__photo {
+  height: 400px;
+  background-color: var(--color-ink);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.agent-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agent-card__label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 26px;
+}
+
+.agent-card__name {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.agent-card__role {
+  font-family: var(--font-mono);
+  font-size: var(--fs-body-sm);
+  text-transform: uppercase;
+}
+
+.agent-card__socials {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.agent-card__socials img {
+  height: 16px;
+  width: auto;
+}
+
+.agent-card--cta {
+  background-color: var(--color-cream);
+  padding: var(--space-3xl) var(--space-xl);
+  justify-content: space-between;
+  border-radius: var(--radius-sm);
+}
+
+.agent-card__cta-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+  margin-bottom: var(--space-md);
+}
+
+.agent-card__cta-heading {
+  font-size: 28px;
+  margin-bottom: var(--space-md);
+}
+
+.agent-card__cta-desc {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.agent-card__cta-btn {
+  width: 100%;
+  margin-top: var(--space-xl);
+}
+
+.agent-card__cta-btn .btn__label {
+  flex: 1 1 auto;
+}
+

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Agent Hero (Our Agent page)
+   ========================================================================== */
+.agent-hero {
+  background-color: var(--color-cream);
+  padding: 12px 20px 20px;
+}
+
+.agent-hero__frame {
+  background-color: var(--color-ink);
+  border-radius: var(--radius-xl);
+  min-height: 448px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.eyebrow--on-dark {
+  color: var(--color-warm-gray);
+}
+
+.agent-hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-cream);
+}
+

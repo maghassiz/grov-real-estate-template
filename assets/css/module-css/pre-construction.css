@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Pre Construction
+   ========================================================================== */
+.preconstruction {
+  background-color: var(--color-ink);
+  padding: 60px var(--container-pad) 100px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5xl);
+}
+
+.preconstruction__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.preconstruction__divider {
+  height: 1px;
+  background-color: rgba(252, 247, 236, 0.15);
+}
+
+.preconstruction__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.preconstruction__cards {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.feature-card {
+  flex: 1 1 0;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+.feature-card__icon {
+  width: 45px;
+  height: 44px;
+}
+
+.feature-card__title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-h6);
+  color: var(--color-cream);
+  margin-bottom: var(--space-md);
+}
+
+.feature-card__list {
+  list-style: disc;
+  padding-left: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: var(--fs-body);
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.6);
+}
+

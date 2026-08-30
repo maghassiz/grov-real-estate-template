@@ -1,0 +1,52 @@
+/* ==========================================================================
+   About page — page-specific components
+   Shares tokens from variables.css and shared primitives from style.css
+   (.eyebrow, .btn, .pill, .collection*, .site-footer, .nav*, .faq-item)
+   ========================================================================== */
+
+/* ---- Eyebrow light variant (for dark section backgrounds) ---- */
+.eyebrow--light {
+  color: var(--color-cream);
+}
+
+.eyebrow__icon--light {
+  filter: brightness(0) invert(1);
+}
+
+/* ---- Shared section divider rule ---- */
+.rule {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-ink-08);
+}
+
+/* ==========================================================================
+   About Hero
+   ========================================================================== */
+.about-hero {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  background-color: var(--color-cream);
+}
+
+.about-hero__panel {
+  background-color: var(--color-ink);
+  border-radius: var(--radius-xl);
+  min-height: 448px;
+  padding: 40px var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+.about-hero__title {
+  max-width: 100%;
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-cream);
+}
+

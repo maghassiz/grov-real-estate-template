@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Blog List page — page-specific components
+   Reuses shared tokens (variables.css) and shared primitives (style.css:
+   .container, .eyebrow, .btn, .btn--outline, .visually-hidden).
+   ========================================================================== */
+
+/* ---- Page shell: cap large-desktop width at 1440px ---- */
+.page-shell {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+/* ---- Shared divider ---- */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--color-ink-08);
+  width: 100%;
+}
+
+/* ---- Button color modifiers (exact page hex values) ---- */
+.btn--ink .btn__label,
+.btn--ink .btn__icon {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.btn--cream .btn__label,
+.btn--cream .btn__icon {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.btn--upper .btn__label {
+  text-transform: uppercase;
+  font-size: var(--fs-mono-sm);
+}
+
+.btn--sm .btn__label {
+  height: 32px;
+  font-size: var(--fs-mono-sm);
+}
+
+.btn--sm .btn__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.btn--outline--light {
+  border-color: rgba(252, 247, 236, 0.3);
+}
+
+.btn--outline--light img {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(6%) saturate(624%) hue-rotate(357deg) brightness(101%) contrast(96%);
+}
+
+/* ==========================================================================
+   Blog Hero
+   ========================================================================== */
+.blog-hero {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+.blog-hero__photo {
+  flex: 0 0 600px;
+  width: 600px;
+  height: 100%;
+}
+
+.blog-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-hero__panel {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-7xl);
+  padding: var(--space-lg) 120px var(--space-lg) 80px;
+}
+
+.blog-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.blog-hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.blog-hero__desc {
+  font-size: var(--fs-body);
+  line-height: 22px;
+  max-width: 500px;
+}
+
+.blog-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+
+.blog-hero__arrows {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.blog-hero__arrows .btn--outline--light:first-child img {
+  transform: rotate(180deg);
+}
+

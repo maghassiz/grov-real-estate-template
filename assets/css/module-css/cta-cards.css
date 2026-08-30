@@ -1,0 +1,33 @@
+/* ==========================================================================
+   CTA cards
+   ========================================================================== */
+.cta-cards {
+  background-color: var(--color-warm-gray);
+  padding: 0 40px 40px;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.cta-card {
+  flex: 1 1 0;
+  min-width: 0;
+  background-color: var(--color-ink);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.cta-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h5);
+  color: var(--color-cream);
+  margin-bottom: var(--space-2xs);
+}
+
+.cta-card__desc {
+  font-size: var(--fs-body-lg);
+  color: rgba(255, 255, 255, 0.56);
+}
+

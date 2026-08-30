@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Manifesto
+   ========================================================================== */
+.manifesto {
+  background-color: var(--color-ink);
+  padding: var(--space-6xl) var(--container-pad) var(--space-7xl);
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.manifesto__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4xl);
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-warm-gray-15);
+  padding-top: var(--space-md);
+}
+
+.manifesto__intro {
+  max-width: 540px;
+  font-size: var(--fs-body-lg);
+  color: var(--color-warm-gray);
+}
+
+.manifesto__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  max-width: 697px;
+}
+
+.manifesto__quote {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: 64px;
+  color: var(--color-cream);
+}
+

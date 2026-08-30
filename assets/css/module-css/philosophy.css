@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Our Philosophy
+   ========================================================================== */
+.philosophy {
+  background-color: var(--color-warm-gray);
+  padding: var(--space-lg) 0 var(--space-7xl);
+}
+
+.philosophy__top {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-7xl);
+}
+
+.philosophy__divider {
+  height: 1px;
+  background-color: var(--color-ink-08);
+}
+
+.philosophy__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.filter-pills {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(33, 35, 37, 0.25);
+  background-color: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: var(--fs-body-sm);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.filter-pill--active {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.philosophy__body {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  display: flex;
+  gap: 120px;
+}
+
+.philosophy__statement {
+  flex: 0 0 462px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-heading);
+}
+
+.philosophy__gallery {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.philosophy__row-2col {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.philosophy__photo {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.philosophy__photo--single {
+  flex: 0 1 51%;
+}
+
+.philosophy__photo img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+.philosophy__photo figcaption {
+  font-family: var(--font-serif);
+  font-size: 26px;
+}
+

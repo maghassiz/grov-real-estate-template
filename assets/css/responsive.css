@@ -437,3 +437,321 @@
     justify-content: center;
   }
 }
+
+
+/* ==========================================================================
+   About page — Tablet (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .philosophy__body {
+    flex-direction: column;
+    gap: var(--space-3xl);
+  }
+
+  .philosophy__statement {
+    flex-basis: auto;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .awards__logos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .awards__logo-divider {
+    display: none;
+  }
+
+  .considerations {
+    flex-direction: column;
+  }
+
+  .considerations__title {
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    flex-direction: column;
+  }
+
+  .gallery-grid__photo--tall {
+    height: 480px;
+  }
+
+  .gallery-grid__photo--short {
+    height: 340px;
+  }
+
+  .preconstruction__cards {
+    flex-direction: column;
+  }
+
+  .agents__grid {
+    flex-wrap: wrap;
+  }
+
+  .agent-card {
+    flex: 1 1 calc(50% - var(--space-xl));
+  }
+
+  .property-headline__floating {
+    display: none;
+  }
+
+  .property-headline__text {
+    max-width: calc(100% - 2 * var(--container-pad));
+  }
+
+  .cta-cards {
+    flex-direction: column;
+  }
+
+  /* Let long forced-break headings rewrap naturally once viewport is
+     narrower than their desktop layout; some webfont + <br> combinations
+     otherwise fail to soft-wrap the trailing segment at narrow widths. */
+  .responsive-break {
+    display: none;
+  }
+}
+
+
+
+/* ==========================================================================
+   About page — Mobile (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .about-hero {
+    padding-inline: var(--space-md);
+  }
+
+  .about-hero__panel {
+    min-height: 360px;
+    padding: var(--space-xl);
+  }
+
+  .philosophy,
+  .agents {
+    padding-inline: 0;
+  }
+
+  .philosophy__top,
+  .philosophy__body {
+    padding-inline: var(--container-pad);
+  }
+
+  .philosophy__row {
+    align-items: flex-start;
+  }
+
+  .philosophy__row-2col {
+    flex-direction: column;
+  }
+
+  .philosophy__photo--single {
+    flex-basis: auto;
+  }
+
+  .awards {
+    padding-inline: var(--container-pad);
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    min-height: 180px;
+    gap: var(--space-4xl);
+  }
+
+  .considerations {
+    padding: var(--container-pad);
+  }
+
+  .consideration-item {
+    align-items: flex-start;
+  }
+
+  .gallery-grid {
+    padding: var(--container-pad);
+  }
+
+  .gallery-grid__photo--tall {
+    height: 360px;
+  }
+
+  .gallery-grid__photo--short {
+    height: 280px;
+  }
+
+  .preconstruction {
+    padding-inline: var(--container-pad);
+  }
+
+  .agents {
+    padding-inline: var(--container-pad);
+  }
+
+  .agents__grid {
+    flex-direction: column;
+  }
+
+  .agent-card--tall .agent-card__photo,
+  .agent-card--short .agent-card__photo {
+    height: 420px;
+  }
+
+  .property-headline {
+    height: 560px;
+  }
+
+  .property-headline__text {
+    left: var(--container-pad);
+    max-width: calc(100% - 2 * var(--container-pad));
+  }
+
+  .property-headline__title {
+    font-size: var(--fs-h4);
+  }
+
+  .cta-card {
+    padding: var(--space-xl);
+  }
+}
+
+
+/* ==========================================================================
+   Blog List page — Tablet (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .blog-hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blog-hero__photo {
+    flex: none;
+    width: 100%;
+    height: 320px;
+  }
+
+  .blog-hero__panel {
+    padding: var(--space-4xl) var(--container-pad);
+    gap: var(--space-4xl);
+  }
+
+  .blog-hero__desc {
+    max-width: 100%;
+  }
+
+  .blog-hero__actions {
+    flex-wrap: wrap;
+  }
+
+  .blog-articles__row {
+    flex-direction: column;
+    gap: var(--space-5xl);
+  }
+
+  .blog-articles__intro,
+  .blog-articles__list {
+    flex: none;
+    width: 100%;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter__heading {
+    max-width: 100%;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-card__illustration {
+    display: none;
+  }
+}
+
+
+
+/* ==========================================================================
+   Blog List page — Mobile (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .blog-hero__panel {
+    padding: var(--space-2xl) var(--container-pad);
+  }
+
+  .blog-hero__title {
+    font-size: var(--fs-h3);
+  }
+
+  .blog-hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .blog-articles__filters {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .filter-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--space-2xs);
+    scrollbar-width: thin;
+    width: 100%;
+  }
+
+  .newsletter__ratings {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .newsletter__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .newsletter__learn-more {
+    width: 100%;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .pagination__pages {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-card--compact {
+    min-width: 0;
+    width: calc(100vw - 32px);
+  }
+
+  .site-footer__key {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}

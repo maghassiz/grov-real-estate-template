@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Testimonials
+   ========================================================================== */
+.testimonials {
+  background-color: var(--color-warm-gray);
+  padding: var(--space-6xl) var(--container-pad) var(--space-7xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7xl);
+}
+
+.testimonials__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.testimonials__counter {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+}
+
+.testimonials__controls {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.testimonials__controls .btn--outline:first-child img {
+  transform: rotate(180deg);
+}
+
+.testimonials__body {
+  display: flex;
+  gap: var(--space-7xl);
+  align-items: flex-start;
+}
+
+.testimonials__photo {
+  width: 180px;
+  height: 200px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.testimonials__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials__content {
+  display: flex;
+  gap: var(--space-6xl);
+  align-items: flex-start;
+}
+
+.testimonials__quote-icon {
+  width: 27px;
+  height: 20px;
+  padding-top: var(--space-md);
+  flex-shrink: 0;
+}
+
+.testimonials__text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7xl);
+}
+
+.testimonials__quote {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+}
+
+.testimonials__meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.testimonials__author-name {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.testimonials__author-role {
+  font-size: var(--fs-body-sm);
+}
+
+.testimonials__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+}
+
+.testimonials__rating img {
+  width: 20px;
+  height: 20px;
+}
+

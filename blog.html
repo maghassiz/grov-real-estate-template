@@ -8,10 +8,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/variables.css" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/responsive.css" />
-<link rel="stylesheet" href="css/blog.css" />
+<link rel="stylesheet" href="assets/css/variables.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/module-css/blog-hero.css" />
+<link rel="stylesheet" href="assets/css/module-css/blog-filters.css" />
+<link rel="stylesheet" href="assets/css/module-css/newsletter.css" />
+<link rel="stylesheet" href="assets/css/module-css/blog-grid.css" />
+<link rel="stylesheet" href="assets/css/module-css/partners.css" />
+<link rel="stylesheet" href="assets/css/module-css/blog-footer.css" />
+<link rel="stylesheet" href="assets/css/responsive.css" />
 </head>
 <body>
 
@@ -20,23 +25,23 @@
 <header class="site-header" data-nav-open="false">
   <nav class="nav container" aria-label="Primary">
     <a href="index.html" class="nav__logo" aria-label="RealEstate home">
-      <img src="assets/icons/logo-mark.svg" alt="" class="nav__logo-mark" />
+      <img src="assets/images/icons/logo-mark.svg" alt="" class="nav__logo-mark" />
       <span class="nav__logo-text">RealEstate</span>
     </a>
 
     <div class="nav__drawer" id="primary-menu">
       <ul class="nav__menu">
-        <li><a href="#" class="nav__item">Housing Solution <img src="assets/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
-        <li><a href="#" class="nav__item">Standart <img src="assets/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
-        <li><a href="#" class="nav__item">How it Works <img src="assets/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
-        <li><a href="#" class="nav__item">Portfolio <img src="assets/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
-        <li><a href="#" class="nav__item">Resources <img src="assets/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
+        <li><a href="#" class="nav__item">Housing Solution <img src="assets/images/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
+        <li><a href="#" class="nav__item">Standart <img src="assets/images/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
+        <li><a href="#" class="nav__item">How it Works <img src="assets/images/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
+        <li><a href="#" class="nav__item">Portfolio <img src="assets/images/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
+        <li><a href="#" class="nav__item">Resources <img src="assets/images/icons/icon-chevron-down.svg" alt="" class="nav__item-icon" /></a></li>
       </ul>
 
       <div class="nav__actions">
         <a href="#" class="btn btn--ink">
           <span class="btn__label">Get Started</span>
-          <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+          <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
         </a>
       </div>
     </div>
@@ -54,12 +59,12 @@
   <!-- Blog Hero -->
   <section class="blog-hero">
     <div class="blog-hero__photo">
-      <img src="assets/images/blog-hero-photo.jpg" alt="Living room styled with a neutral sofa, wooden side table, and warm accent pillows" />
+      <img src="assets/images/blog/blog-hero-photo.jpg" alt="Living room styled with a neutral sofa, wooden side table, and warm accent pillows" />
     </div>
     <div class="blog-hero__panel">
       <div class="blog-hero__content">
         <span class="eyebrow">
-          <img src="assets/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
+          <img src="assets/images/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
           BLOG &amp; RESOURCES
         </span>
         <h1 class="blog-hero__title">What Today&rsquo;s Market Means for Buyers and Investors</h1>
@@ -69,14 +74,14 @@
       <div class="blog-hero__actions">
         <a href="#" class="btn btn--cream">
           <span class="btn__label">Read article</span>
-          <span class="btn__icon"><img src="assets/icons/icon-arrow-right-light.svg" alt="" /></span>
+          <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right-light.svg" alt="" /></span>
         </a>
         <div class="blog-hero__arrows">
           <button type="button" class="btn--outline btn--outline--light" aria-label="Previous article">
-            <img src="assets/icons/icon-arrow-prev-next.svg" alt="" />
+            <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" />
           </button>
           <button type="button" class="btn--outline btn--outline--light" aria-label="Next article">
-            <img src="assets/icons/icon-arrow-prev-next.svg" alt="" />
+            <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" />
           </button>
         </div>
       </div>
@@ -97,7 +102,7 @@
         <button type="button" class="filter-pill" role="tab" aria-selected="false">Selling</button>
       </div>
       <button type="button" class="blog-articles__search" aria-label="Search articles">
-        <img src="assets/icons/icon-search.svg" alt="" />
+        <img src="assets/images/icons/icon-search.svg" alt="" />
       </button>
     </div>
 
@@ -113,7 +118,7 @@
       <div class="blog-articles__featured">
         <article class="featured-article">
           <div class="featured-article__photo">
-            <img src="assets/images/blog-article-photo-1.jpg" alt="Living room with fireplace, wood beams, and large windows" />
+            <img src="assets/images/blog/blog-article-photo-1.jpg" alt="Living room with fireplace, wood beams, and large windows" />
           </div>
           <div class="featured-article__meta-top">
             <span>BUYING</span>
@@ -129,7 +134,7 @@
 
         <article class="featured-article">
           <div class="featured-article__photo">
-            <img src="assets/images/blog-article-photo-2.jpg" alt="Home office nook styled with a wooden desk and warm lighting" />
+            <img src="assets/images/blog/blog-article-photo-2.jpg" alt="Home office nook styled with a wooden desk and warm lighting" />
           </div>
           <div class="featured-article__meta-top">
             <span>INVESTMENTS</span>
@@ -232,7 +237,7 @@
 
         <a href="#" class="view-more-link">
           View more
-          <img src="assets/icons/icon-arrow-right-light.svg" alt="" />
+          <img src="assets/images/icons/icon-arrow-right-light.svg" alt="" />
         </a>
       </div>
     </div>
@@ -242,16 +247,16 @@
   <section class="newsletter" data-reveal>
     <div class="newsletter__intro">
       <span class="eyebrow">
-        <img src="assets/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
+        <img src="assets/images/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
         STAY INFORMED
       </span>
       <h2 class="newsletter__heading">Get the latest <br />real estate insights</h2>
       <p class="newsletter__desc">Exclusive perspectives on the market, delivered with clarity and precision.</p>
 
       <ul class="newsletter__ratings">
-        <li><img src="assets/icons/icon-trustpilot.svg" alt="" /> 4.8 on Trustpilot</li>
-        <li><img src="assets/icons/icon-g2.svg" alt="" /> 4.8 on G2</li>
-        <li><img src="assets/icons/icon-capterra.svg" alt="" /> 4.4 on Capterra</li>
+        <li><img src="assets/images/icons/icon-trustpilot.svg" alt="" /> 4.8 on Trustpilot</li>
+        <li><img src="assets/images/icons/icon-g2.svg" alt="" /> 4.8 on G2</li>
+        <li><img src="assets/images/icons/icon-capterra.svg" alt="" /> 4.4 on Capterra</li>
       </ul>
     </div>
 
@@ -267,7 +272,7 @@
       <div class="newsletter__buttons">
         <button type="submit" class="btn btn--cream btn--upper">
           <span class="btn__label">Subscribe</span>
-          <span class="btn__icon"><img src="assets/icons/icon-arrow-right-light.svg" alt="" /></span>
+          <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right-light.svg" alt="" /></span>
         </button>
         <a href="#" class="newsletter__learn-more">LEARN MORE</a>
       </div>
@@ -279,7 +284,7 @@
     <div class="blog-grid">
       <article class="blog-grid-card">
         <div class="blog-grid-card__photo">
-          <img src="assets/images/blog-grid-photo-1.jpg" alt="Modern kitchen and dining area with wooden accents" />
+          <img src="assets/images/blog/blog-grid-photo-1.jpg" alt="Modern kitchen and dining area with wooden accents" />
         </div>
         <div class="blog-grid-card__content">
           <p class="blog-grid-card__date">Apr 10, 2026</p>
@@ -287,14 +292,14 @@
           <p class="blog-grid-card__desc blog-grid-card__desc--80">Understand the key steps, costs, and decisions involved before entering the property market for the first time.</p>
           <a href="#" class="btn btn--ink btn--sm">
             <span class="btn__label">Read more</span>
-            <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+            <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
           </a>
         </div>
       </article>
 
       <article class="blog-grid-card">
         <div class="blog-grid-card__photo">
-          <img src="assets/images/blog-grid-photo-2.jpg" alt="Bright living room with large glass sliding doors" />
+          <img src="assets/images/blog/blog-grid-photo-2.jpg" alt="Bright living room with large glass sliding doors" />
         </div>
         <div class="blog-grid-card__content">
           <p class="blog-grid-card__date">Apr 8, 2026</p>
@@ -302,14 +307,14 @@
           <p class="blog-grid-card__desc blog-grid-card__desc--80">Learn how to set a competitive price based on market trends, property value, and buyer expectations.</p>
           <a href="#" class="btn btn--ink btn--sm">
             <span class="btn__label">Read more</span>
-            <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+            <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
           </a>
         </div>
       </article>
 
       <article class="blog-grid-card">
         <div class="blog-grid-card__photo">
-          <img src="assets/images/blog-grid-photo-3.jpg" alt="Portrait interior shot styled with abstract art" />
+          <img src="assets/images/blog/blog-grid-photo-3.jpg" alt="Portrait interior shot styled with abstract art" />
         </div>
         <div class="blog-grid-card__content">
           <p class="blog-grid-card__date">Apr 4, 2026</p>
@@ -317,14 +322,14 @@
           <p class="blog-grid-card__desc blog-grid-card__desc--80">Explore the fundamentals of property investment, including risk, return, and long-term value potential.</p>
           <a href="#" class="btn btn--ink btn--sm">
             <span class="btn__label">Read more</span>
-            <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+            <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
           </a>
         </div>
       </article>
 
       <article class="blog-grid-card">
         <div class="blog-grid-card__photo">
-          <img src="assets/images/blog-grid-photo-4.jpg" alt="Angled roofline of a modern house against a clear sky" />
+          <img src="assets/images/blog/blog-grid-photo-4.jpg" alt="Angled roofline of a modern house against a clear sky" />
         </div>
         <div class="blog-grid-card__content">
           <p class="blog-grid-card__date">March 29, 2026</p>
@@ -332,14 +337,14 @@
           <p class="blog-grid-card__desc">Discover how location, amenities, and lifestyle factors influence the right neighborhood for your needs.</p>
           <a href="#" class="btn btn--ink btn--sm">
             <span class="btn__label">Read more</span>
-            <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+            <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
           </a>
         </div>
       </article>
 
       <article class="blog-grid-card">
         <div class="blog-grid-card__photo">
-          <img src="assets/images/blog-grid-photo-5.jpg" alt="Modern house exterior with large glass windows at dusk" />
+          <img src="assets/images/blog/blog-grid-photo-5.jpg" alt="Modern house exterior with large glass windows at dusk" />
         </div>
         <div class="blog-grid-card__content">
           <p class="blog-grid-card__date">March 16, 2026</p>
@@ -347,14 +352,14 @@
           <p class="blog-grid-card__desc">Know what to look for in a rental property, from lease terms to hidden costs and overall suitability.</p>
           <a href="#" class="btn btn--ink btn--sm">
             <span class="btn__label">Read more</span>
-            <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+            <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
           </a>
         </div>
       </article>
 
       <article class="blog-grid-card">
         <div class="blog-grid-card__photo">
-          <img src="assets/images/blog-grid-photo-6.jpg" alt="Cozy living room with a lit fireplace and neutral furnishings" />
+          <img src="assets/images/blog/blog-grid-photo-6.jpg" alt="Cozy living room with a lit fireplace and neutral furnishings" />
         </div>
         <div class="blog-grid-card__content">
           <p class="blog-grid-card__date">March 10, 2026</p>
@@ -362,7 +367,7 @@
           <p class="blog-grid-card__desc">Stay informed on current property trends, pricing movements, and what they mean for buyers and investors.</p>
           <a href="#" class="btn btn--ink btn--sm">
             <span class="btn__label">Read more</span>
-            <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+            <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
           </a>
         </div>
       </article>
@@ -372,7 +377,7 @@
 
     <nav class="pagination" aria-label="Blog pagination">
       <button type="button" class="pagination__nav">
-        <img src="assets/icons/icon-arrow-prev-next.svg" alt="" class="pagination__nav-icon pagination__nav-icon--prev" />
+        <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" class="pagination__nav-icon pagination__nav-icon--prev" />
         Previous
       </button>
 
@@ -388,7 +393,7 @@
 
       <button type="button" class="pagination__nav">
         Next
-        <img src="assets/icons/icon-arrow-right-light.svg" alt="" class="pagination__nav-icon" />
+        <img src="assets/images/icons/icon-arrow-right-light.svg" alt="" class="pagination__nav-icon" />
       </button>
     </nav>
   </section>
@@ -397,32 +402,32 @@
   <section class="partners" data-reveal>
     <div class="partners__title">
       <span class="eyebrow">
-        <img src="assets/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
+        <img src="assets/images/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
         OUR PARTNER
       </span>
       <h2 class="partners__heading">Trusted and featured<br />by industry leaders.</h2>
     </div>
     <ul class="partners__list">
-      <li><img src="assets/images/partner-logo-1.png" alt="Logoipsum Foundation" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-1.png" alt="Logoipsum Foundation" class="partners__logo" /></li>
       <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/partner-logo-2.png" alt="Logoipsum University" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-2.png" alt="Logoipsum University" class="partners__logo" /></li>
       <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/partner-logo-3.png" alt="Logoipsum" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-3.png" alt="Logoipsum" class="partners__logo" /></li>
       <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/partner-logo-4.png" alt="Logoipsum" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-4.png" alt="Logoipsum" class="partners__logo" /></li>
       <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/partner-logo-5.png" alt="Logoipsum" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-5.png" alt="Logoipsum" class="partners__logo" /></li>
       <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/partner-logo-6.png" alt="Logoipsum" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-6.png" alt="Logoipsum" class="partners__logo" /></li>
       <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/partner-logo-7.png" alt="Logoipsum" class="partners__logo" /></li>
+      <li><img src="assets/images/partners/partner-logo-7.png" alt="Logoipsum" class="partners__logo" /></li>
     </ul>
   </section>
 
 </main>
 
 <footer class="site-footer site-footer--blog">
-  <img src="assets/images/blog-footer-bg.jpg" alt="Modern glass-fronted house exterior with a landscaped garden at dusk" class="site-footer__bg" />
+  <img src="assets/images/blog/blog-footer-bg.jpg" alt="Modern glass-fronted house exterior with a landscaped garden at dusk" class="site-footer__bg" />
   <div class="site-footer__overlay"></div>
 
   <div class="footer-card footer-card--compact">
@@ -430,7 +435,7 @@
       <p class="footer-card__col-label">MENU</p>
       <nav class="footer-card__menu" aria-label="Footer">
         <a href="#" class="footer-card__link">About</a>
-        <a href="#" class="footer-card__link footer-card__link--active">Collection <img src="assets/icons/icon-dropdown-active.svg" alt="" /></a>
+        <a href="#" class="footer-card__link footer-card__link--active">Collection <img src="assets/images/icons/icon-dropdown-active.svg" alt="" /></a>
         <a href="#" class="footer-card__link">Our Agent</a>
         <a href="#" class="footer-card__link">Newest</a>
         <a href="#" class="footer-card__link">Contact</a>
@@ -450,7 +455,7 @@
 
     <a href="#" class="btn btn--ink footer-card__cta">
       <span class="btn__label">Get a Quote</span>
-      <span class="btn__icon"><img src="assets/icons/icon-arrow-right.svg" alt="" /></span>
+      <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
     </a>
   </div>
 
@@ -472,7 +477,7 @@
 
 </div>
 
-<script src="js/vendor/gsap.min.js"></script>
-<script src="js/main.js"></script>
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   House Hero (House List page)
+   ========================================================================== */
+.house-hero {
+  background-color: var(--color-cream);
+  padding: 12px 20px 20px;
+}
+
+.house-hero__frame {
+  background-color: var(--color-ink);
+  border-radius: var(--radius-xl);
+  min-height: 448px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.house-hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-cream);
+}
+

@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Best Collection (image row + property triptych)
+   ========================================================================== */
+.best-collection {
+  background-color: var(--color-warm-gray);
+  padding: var(--space-2xl) var(--container-pad) var(--space-7xl);
+}
+
+.best-collection__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  border-top: 1px solid var(--color-ink-08);
+  padding-top: var(--space-md);
+  margin-bottom: 56px;
+}
+
+.best-collection__heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4xl);
+  flex-wrap: wrap;
+}
+
+.best-collection__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+}
+
+.best-collection__body {
+  max-width: 650px;
+  font-size: var(--fs-body-lg);
+  line-height: 26px;
+}
+
+.best-collection__row {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: 56px;
+}
+
+.best-collection__row img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.best-collection__row-item--wide {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.best-collection__row-item--narrow {
+  flex: 0 0 380px;
+}
+
+.best-collection__row-item--narrow img {
+  height: 400px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.property-card__photo {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  height: 460px;
+}
+
+.property-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-card__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.property-card__tag {
+  position: absolute;
+  top: 178px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  color: rgba(252, 247, 236, 0.8);
+}
+
+.property-card__content {
+  padding-top: var(--space-md);
+}
+
+.property-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h5);
+  margin-bottom: var(--space-sm);
+}
+
+.property-card__desc {
+  font-size: var(--fs-body);
+  margin-bottom: var(--space-lg);
+}
+
