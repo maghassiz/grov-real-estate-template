@@ -84,6 +84,11 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-flex;
   align-items: stretch;
   gap: 2px;
+  transition: gap 0.25s ease;
+}
+
+.btn:hover {
+  gap: 8px;
 }
 
 .btn__label {

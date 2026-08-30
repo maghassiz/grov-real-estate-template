@@ -29,8 +29,13 @@
   display: flex;
   gap: var(--space-xl);
   overflow-x: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding-bottom: var(--space-xs);
+}
+
+.collection__cards::-webkit-scrollbar {
+  display: none;
 }
 
 .collection-card {

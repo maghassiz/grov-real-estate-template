@@ -430,6 +430,12 @@
     order: 3;
     width: 100%;
     overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .listings-pagination__pages::-webkit-scrollbar {
+    display: none;
   }
 
   .listings-pagination__btn {
@@ -710,8 +716,13 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: var(--space-2xs);
-    scrollbar-width: thin;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     width: 100%;
+  }
+
+  .filter-pills::-webkit-scrollbar {
+    display: none;
   }
 
   .newsletter__ratings {

@@ -73,10 +73,19 @@ function initScrollReveal() {
 
   const useGsap = typeof gsap !== "undefined";
 
+  // Reveal each target's own direct children with a slight stagger instead
+  // of fading the whole block in at once — every element inside a section
+  // eases in on its own beat when the section enters view.
+  const childrenOf = (el) => {
+    const kids = Array.from(el.children);
+    return kids.length ? kids : [el];
+  };
+  const allElements = Array.from(targets).flatMap(childrenOf);
+
   if (useGsap) {
-    gsap.set(targets, { opacity: 0, y: 24 });
+    gsap.set(allElements, { opacity: 0, y: 24 });
   } else {
-    targets.forEach((el) => {
+    allElements.forEach((el) => {
       el.style.opacity = "0";
       el.style.transform = "translateY(24px)";
     });
@@ -85,9 +94,9 @@ function initScrollReveal() {
   if (!("IntersectionObserver" in window)) {
     // No IntersectionObserver support: show everything immediately.
     if (useGsap) {
-      gsap.set(targets, { opacity: 1, y: 0 });
+      gsap.set(allElements, { opacity: 1, y: 0 });
     } else {
-      targets.forEach((el) => {
+      allElements.forEach((el) => {
         el.style.opacity = "1";
         el.style.transform = "none";
       });
@@ -99,15 +108,17 @@ function initScrollReveal() {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const el = entry.target;
+        const children = childrenOf(entry.target);
         if (useGsap) {
-          gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
+          gsap.to(children, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", stagger: 0.08 });
         } else {
-          el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-          el.style.opacity = "1";
-          el.style.transform = "none";
+          children.forEach((child, i) => {
+            child.style.transition = `opacity 0.8s ease ${i * 0.08}s, transform 0.8s ease ${i * 0.08}s`;
+            child.style.opacity = "1";
+            child.style.transform = "none";
+          });
         }
-        observer.unobserve(el);
+        observer.unobserve(entry.target);
       });
     },
     // threshold 0 (not e.g. 0.15): intersectionRatio is relative to the
