@@ -47,6 +47,12 @@
   font-weight: 500;
   font-size: 20px;
   color: var(--color-ink);
+  padding-inline: 0;
+  transition: padding-inline 0.25s ease;
+}
+
+.faq-item__question:hover {
+  padding-inline: var(--space-md);
 }
 
 .faq-item__icon {

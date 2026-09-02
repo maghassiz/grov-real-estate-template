@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Blog detail — article header, body, related articles
+   ========================================================================== */
+.article-header {
+  padding-block: var(--space-6xl) var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 840px;
+}
+
+.article-header__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+}
+
+.article-header__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--fs-body);
+  color: var(--color-ink-64);
+}
+
+.article-hero {
+  padding-bottom: var(--space-6xl);
+}
+
+.article-hero__photo {
+  height: 560px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.article-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Article body ---- */
+.article-body {
+  padding-bottom: var(--space-7xl);
+  display: flex;
+  justify-content: center;
+}
+
+.article-body__content {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.article-body__content p {
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: var(--color-ink-80);
+}
+
+.article-body__content h2 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h5);
+  line-height: var(--lh-heading);
+  margin-top: var(--space-lg);
+  color: var(--color-ink);
+}
+
+.article-body__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-left: var(--space-xl);
+}
+
+.article-body__content ul li {
+  list-style: disc;
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: var(--color-ink-80);
+}
+
+.article-pull-quote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-ink-12);
+  border-bottom: 1px solid var(--color-ink-12);
+}
+
+.article-pull-quote__icon {
+  width: 28px;
+  height: 20px;
+}
+
+.article-pull-quote blockquote {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h6);
+  line-height: var(--lh-heading);
+  color: var(--color-ink);
+}
+
+/* ---- Related articles ---- */
+.article-related {
+  padding-block: var(--space-6xl) var(--space-7xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.article-related__heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-heading);
+}

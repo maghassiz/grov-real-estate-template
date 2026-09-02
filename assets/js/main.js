@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaqAccordion();
   initScrollReveal();
   initFilterPills();
+  initFilterDropdowns();
   initTestimonialsCarousel();
+  initBlogHeroSlideshow();
   initFeaturedHoverPreview();
+  initStatCounters();
 });
 
 /* ---- Mobile / tablet nav toggle ---- */
@@ -46,6 +49,54 @@ function initFilterPills() {
   });
 }
 
+/* ---- House list filter pills (placeholder dropdown panels) ---- */
+function initFilterDropdowns() {
+  const dropdowns = Array.from(document.querySelectorAll(".filters__dropdown"));
+  if (!dropdowns.length) return;
+
+  const closeAll = (except) => {
+    dropdowns.forEach((dropdown) => {
+      if (dropdown === except) return;
+      dropdown.setAttribute("data-open", "false");
+      dropdown.querySelector(".filters__pill")?.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector(".filters__pill");
+    const label = dropdown.querySelector(".filters__pill-label");
+    const options = dropdown.querySelectorAll(".filters__dropdown-option");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = dropdown.getAttribute("data-open") === "true";
+      closeAll(dropdown);
+      dropdown.setAttribute("data-open", String(!isOpen));
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        options.forEach((o) => {
+          o.classList.remove("filters__dropdown-option--active");
+          o.setAttribute("aria-selected", "false");
+        });
+        option.classList.add("filters__dropdown-option--active");
+        option.setAttribute("aria-selected", "true");
+        if (label) label.textContent = option.textContent;
+        dropdown.setAttribute("data-open", "false");
+        trigger.setAttribute("aria-expanded", "false");
+      });
+    });
+  });
+
+  document.addEventListener("click", () => closeAll());
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeAll();
+  });
+}
+
 /* ---- Testimonials carousel (slides the track left/right through client stories) ---- */
 function initTestimonialsCarousel() {
   const section = document.querySelector(".testimonials");
@@ -82,6 +133,46 @@ function initTestimonialsCarousel() {
 
   prevBtn?.addEventListener("click", () => go(-1));
   nextBtn?.addEventListener("click", () => go(1));
+
+  render();
+}
+
+/* ---- Blog hero slideshow (cycles featured articles behind the hero panel) ---- */
+function initBlogHeroSlideshow() {
+  const section = document.querySelector(".blog-hero");
+  if (!section) return;
+
+  const track = section.querySelector(".blog-hero__track");
+  const slides = Array.from(section.querySelectorAll(".blog-hero__slide"));
+  if (!track || !slides.length) return;
+
+  const total = slides.length;
+  let index = Math.max(
+    slides.findIndex((slide) => slide.getAttribute("data-active") === "true"),
+    0
+  );
+
+  const render = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, i) => {
+      const isActive = i === index;
+      slide.setAttribute("data-active", String(isActive));
+      slide.toggleAttribute("inert", !isActive);
+    });
+  };
+
+  const go = (delta) => {
+    index = (index + delta + total) % total;
+    render();
+  };
+
+  // Every slide carries its own prev/next controls (mirrors the visible
+  // panel), so bind on the section and let clicks bubble from whichever
+  // slide is currently active.
+  section.addEventListener("click", (event) => {
+    if (event.target.closest(".blog-hero__prev")) go(-1);
+    else if (event.target.closest(".blog-hero__next")) go(1);
+  });
 
   render();
 }
@@ -215,3 +306,60 @@ function initScrollReveal() {
 
   targets.forEach((el) => observer.observe(el));
 }
+
+/* ---- Stat counters (count up from 0 once the awards section scrolls into view) ---- */
+function initStatCounters() {
+  const grid = document.querySelector(".stat-grid");
+  if (!grid) return;
+
+  const values = Array.from(grid.querySelectorAll(".stat-card__value"));
+  if (!values.length) return;
+
+  const counters = values
+    .map((el) => {
+      const text = el.textContent.trim();
+      const match = text.match(/^(\D*)([\d,]+)(\D*)$/);
+      if (!match) return null;
+      const [, prefix, digits, suffix] = match;
+      el.textContent = `${prefix}0${suffix}`;
+      return { el, prefix, suffix, target: parseInt(digits.replace(/,/g, ""), 10), useCommas: digits.includes(",") };
+    })
+    .filter(Boolean);
+
+  if (!counters.length) return;
+
+  const duration = 1500;
+
+  const animate = () => {
+    counters.forEach(({ el, prefix, suffix, target, useCommas }) => {
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(target * eased);
+        el.textContent = `${prefix}${useCommas ? value.toLocaleString("en-US") : value}${suffix}`;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    animate();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        animate();
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(grid);
+}
+

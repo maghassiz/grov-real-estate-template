@@ -81,6 +81,16 @@
   font-size: var(--fs-body-sm);
   letter-spacing: -0.02em;
   color: var(--color-ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination__nav:hover {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.pagination__nav:hover .pagination__nav-icon {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(6%) saturate(624%) hue-rotate(357deg) brightness(101%) contrast(96%);
 }
 
 .pagination__nav-icon {
@@ -109,12 +119,23 @@
   border: 1px solid var(--color-ink-25);
   font-size: 15px;
   color: var(--color-ink);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination__page:hover {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink-08);
 }
 
 .pagination__page--active {
   background-color: var(--color-ink);
   border-color: var(--color-ink);
   color: var(--color-cream);
+}
+
+.pagination__page--active:hover {
+  background-color: var(--color-ink-80);
+  border-color: var(--color-ink-80);
 }
 
 .pagination__page--ellipsis {
