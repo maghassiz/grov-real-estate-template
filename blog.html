@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- TEMPLATE NOTE: this page contains demo/placeholder content. Search this file for "CUSTOMIZE" to find every spot to update before launch. -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- CUSTOMIZE: update the page title and meta description below for your brand and SEO -->
 <title>Blog &amp; Resources — Grov</title>
 <meta name="description" content="From pricing trends to buyer behavior, here's what's shaping today's real estate market and how you can respond with confidence." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +18,7 @@
 <link rel="stylesheet" href="assets/css/module-css/blog-grid.css?v=2" />
 <link rel="stylesheet" href="assets/css/module-css/partners.css?v=2" />
 <link rel="stylesheet" href="assets/css/responsive.css?v=4" />
+<!-- CUSTOMIZE: no favicon is set for this site — add e.g. <link rel="icon" href="assets/images/favicon.ico" /> here -->
 </head>
 <body>
 
@@ -23,6 +26,7 @@
 
 <header class="site-header" data-nav-open="false">
   <nav class="nav container" aria-label="Primary">
+    <!-- CUSTOMIZE: replace brand name "Grov" and the logo image (assets/images/icons/logo-mark.svg) with your own -->
     <a href="index.html" class="nav__logo" aria-label="Grov home">
       <img src="assets/images/icons/logo-mark.svg" alt="" class="nav__logo-mark" />
       <span class="nav__logo-text">Grov</span>
@@ -37,7 +41,8 @@
       </ul>
 
       <div class="nav__actions">
-        <a href="#" class="btn btn--ink">
+        <!-- CUSTOMIZE: point this CTA to your real contact method (was a dead "#" link) -->
+        <a href="mailto:hello@grov.com" class="btn btn--ink">
           <span class="btn__label">Get Started</span>
           <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
         </a>
@@ -55,6 +60,7 @@
 <main>
 
   <!-- Blog Hero (slideshow) -->
+  <!-- CUSTOMIZE: all 3 slides below are demo content (2 are explicitly labeled "Placeholder Headline") - replace with your real featured articles -->
   <section class="blog-hero" aria-roledescription="carousel" aria-label="Featured articles">
     <div class="blog-hero__track">
 
@@ -157,6 +163,7 @@
   <!-- Article filters + most recent articles -->
   <section class="blog-articles container" data-reveal>
     <div class="blog-articles__filters">
+      <!-- CUSTOMIZE: these are demo category names ("Investments"/"Investing" is a near-duplicate) - rename to match your real content categories -->
       <div class="filter-pills" role="tablist" aria-label="Filter articles by category">
         <button type="button" class="filter-pill filter-pill--active" role="tab" aria-selected="true">All</button>
         <button type="button" class="filter-pill" role="tab" aria-selected="false">Buying</button>
@@ -164,7 +171,7 @@
         <button type="button" class="filter-pill" role="tab" aria-selected="false">Renting</button>
         <button type="button" class="filter-pill" role="tab" aria-selected="false">Investing</button>
         <button type="button" class="filter-pill" role="tab" aria-selected="false">Guides</button>
-        <button type="button" class="filter-pill" role="tab" aria-selected="false">Lifesyle</button>
+        <button type="button" class="filter-pill" role="tab" aria-selected="false">Lifestyle</button>
         <button type="button" class="filter-pill" role="tab" aria-selected="false">Selling</button>
       </div>
       <button type="button" class="blog-articles__search" aria-label="Search articles">
@@ -178,9 +185,11 @@
       <div class="blog-articles__intro">
         <h2 class="blog-articles__heading">Our most recent <br />articles</h2>
         <p class="blog-articles__desc">Explore the latest insights on buying, selling, and investing in real estate&mdash;designed to help you make confident decisions.</p>
+        <!-- CUSTOMIZE: this date is static demo text, not dynamic - update it manually or wire it to your CMS/publish date -->
         <p class="blog-articles__updated">Last update: April 13, 2026</p>
       </div>
 
+      <!-- CUSTOMIZE: both featured articles below are demo posts (author "Tonny W." is a fictional placeholder byline reused across this file) - replace with your real content/authors -->
       <div class="blog-articles__featured">
         <a href="blog-detail.html" class="featured-article">
           <div class="featured-article__photo">
@@ -215,10 +224,11 @@
         </a>
       </div>
 
+      <!-- CUSTOMIZE: the 7 article rows below are demo posts (all "By Editorial", all linking to the same blog-detail.html) - replace with your real articles -->
       <div class="blog-articles__list">
         <a href="blog-detail.html" class="article-row-item">
           <div class="article-row-item__meta-top">
-            <span>SEELING</span>
+            <span>SELLING</span>
             <span>8 mins</span>
           </div>
           <div class="article-row-item__bottom">
@@ -335,6 +345,7 @@
 
         <hr class="divider divider--list" />
 
+        <!-- CUSTOMIZE: dead "#" link - point this at more articles (or remove if not needed) -->
         <a href="#" class="view-more-link">
           View more
           <img src="assets/images/icons/icon-arrow-right-light.svg" alt="" />
@@ -353,6 +364,7 @@
       <h2 class="newsletter__heading">Get the latest <br />real estate insights</h2>
       <p class="newsletter__desc">Exclusive perspectives on the market, delivered with clarity and precision.</p>
 
+      <!-- CUSTOMIZE (required before launch): these ratings (Trustpilot/G2/Capterra) are fabricated placeholder numbers for B2B software review sites, which do not fit a real estate business; replace with real testimonials/ratings you can verify, or remove this list -->
       <ul class="newsletter__ratings">
         <li><img src="assets/images/icons/icon-trustpilot.svg" alt="" /> 4.8 on Trustpilot</li>
         <li><img src="assets/images/icons/icon-g2.svg" alt="" /> 4.8 on G2</li>
@@ -360,6 +372,7 @@
       </ul>
     </div>
 
+    <!-- CUSTOMIZE: this form has no action/endpoint wired up; connect it to your email service (Mailchimp, ConvertKit, etc.) or a backend endpoint before launch -->
     <form class="newsletter__form" novalidate>
       <label class="visually-hidden" for="newsletter-email">Email address</label>
       <input type="email" id="newsletter-email" name="email" class="newsletter__input" placeholder="Enter your email" required />
@@ -374,12 +387,14 @@
           <span class="btn__label">Subscribe</span>
           <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right-light.svg" alt="" /></span>
         </button>
+        <!-- CUSTOMIZE: dead "#" link - point this at a real learn-more page, or remove -->
         <a href="#" class="newsletter__learn-more">LEARN MORE</a>
       </div>
     </form>
   </section>
 
   <!-- Blog grid + pagination -->
+  <!-- CUSTOMIZE: all 6 cards below are demo posts - replace with your real articles -->
   <section class="blog-grid-section container" data-reveal>
     <div class="blog-grid">
       <article class="blog-grid-card">
@@ -475,6 +490,7 @@
 
     <hr class="divider" />
 
+    <!-- CUSTOMIZE: this pagination is decorative demo markup - every link points back to this same page. Wire up real pagination (or a CMS/backend) once you have more than one page of posts -->
     <nav class="pagination" aria-label="Blog pagination">
       <a href="blog.html" class="pagination__nav">
         <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" class="pagination__nav-icon pagination__nav-icon--prev" />
@@ -507,6 +523,7 @@
       </span>
       <h2 class="partners__heading">Trusted and featured<br />by industry leaders.</h2>
     </div>
+    <!-- CUSTOMIZE: these are "Logoipsum" placeholder logos (from a dummy-logo generator) — replace both logo tracks below with your real partner/client logos, or remove this section -->
     <div class="partners__marquee">
       <ul class="partners__list partners__list--track">
         <li><img src="assets/images/partners/partner-logo-1.png" alt="Logoipsum Foundation" class="partners__logo" /></li>
@@ -556,10 +573,12 @@
           <a href="house-list.html" class="footer-card__link">House List</a>
           <a href="our-agent.html" class="footer-card__link">Our Agent</a>
           <a href="blog.html" class="footer-card__link footer-card__link--active">Blog <img src="assets/images/icons/icon-dropdown-active.svg" alt="" /></a>
+          <!-- CUSTOMIZE: replace mailto:hello@grov.com everywhere on this site with your real contact email -->
           <a href="mailto:hello@grov.com" class="footer-card__link">Contact</a>
         </nav>
       </div>
       <div>
+        <!-- CUSTOMIZE: these social links are placeholder bare-domain URLs (instagram.com/, youtube.com/, etc.) — replace with your real profile URLs -->
         <p class="footer-card__col-label">SOCIAL MEDIA</p>
         <nav class="footer-card__menu" aria-label="Social media">
           <a href="https://instagram.com/" class="footer-card__link" target="_blank" rel="noopener">Instagram</a>
@@ -573,9 +592,10 @@
       </div>
     </div>
 
+    <!-- CUSTOMIZE: replace with your real phone number and a real contact email (currently placeholder demo values) -->
     <div class="footer-card__contact">
       <div class="footer-card__contact-group">
-        <a href="tel:+12920029292019">+1 292 002 929 2019</a>
+        <a href="tel:+15550192838">+1 (555) 019-2838</a>
         <a href="mailto:info@grov.estate">info@grov.estate</a>
       </div>
     </div>

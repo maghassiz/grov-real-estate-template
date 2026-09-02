@@ -1,3 +1,4 @@
+/* CUSTOMIZE: this file is the site's single theming source - swap the color tokens, fonts, and spacing scale below to rebrand the entire template from one place */
 :root {
   /* ---- Color tokens ---- */
   --color-cream: #fcf7ec;
