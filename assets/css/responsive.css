@@ -33,6 +33,13 @@
     gap: 0;
   }
 
+  .nav__menu {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
   .nav__actions {
     padding-block: var(--space-lg);
   }

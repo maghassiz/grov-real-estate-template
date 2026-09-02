@@ -99,14 +99,29 @@
   flex-shrink: 0;
 }
 
-.featured__floating-img {
+.featured__cursor-img {
   position: absolute;
-  left: 222px;
-  top: -48px;
+  top: 0;
+  left: 0;
   width: 300px;
   height: 370px;
   border-radius: var(--radius-sm);
   object-fit: cover;
   pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 5;
+}
+
+.featured__cursor-img.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (hover: none) {
+  .featured__cursor-img {
+    display: none;
+  }
 }
 

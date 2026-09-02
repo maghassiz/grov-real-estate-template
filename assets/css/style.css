@@ -184,6 +184,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   height: 80px;
   padding-block: 14px;
 }
@@ -214,6 +215,10 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   align-items: center;
   gap: 28px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .nav__item {
