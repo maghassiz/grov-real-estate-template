@@ -67,6 +67,10 @@
   gap: var(--space-xl);
 }
 
+.property-card {
+  display: block;
+}
+
 .property-card__photo {
   position: relative;
   border-radius: var(--radius-sm);

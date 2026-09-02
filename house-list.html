@@ -3,33 +3,33 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>House List — RealEstate</title>
+<title>House List — Grov</title>
 <meta name="description" content="Discover properties that match your vision and lifestyle. Browse homes based on your preferences, budget, and location." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/variables.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css?v=4" />
 <link rel="stylesheet" href="assets/css/module-css/house-hero.css" />
-<link rel="stylesheet" href="assets/css/module-css/house-listings.css" />
-<link rel="stylesheet" href="assets/css/module-css/partners.css" />
-<link rel="stylesheet" href="assets/css/module-css/faq.css" />
-<link rel="stylesheet" href="assets/css/responsive.css" />
+<link rel="stylesheet" href="assets/css/module-css/house-listings.css?v=2" />
+<link rel="stylesheet" href="assets/css/module-css/partners.css?v=2" />
+<link rel="stylesheet" href="assets/css/module-css/faq.css?v=3" />
+<link rel="stylesheet" href="assets/css/responsive.css?v=4" />
 </head>
 <body>
 
 <header class="site-header" data-nav-open="false">
   <nav class="nav container" aria-label="Primary">
-    <a href="index.html" class="nav__logo" aria-label="RealEstate home">
+    <a href="index.html" class="nav__logo" aria-label="Grov home">
       <img src="assets/images/icons/logo-mark.svg" alt="" class="nav__logo-mark" />
-      <span class="nav__logo-text">RealEstate</span>
+      <span class="nav__logo-text">Grov</span>
     </a>
 
     <div class="nav__drawer" id="primary-menu">
       <ul class="nav__menu">
         <li><a href="about.html" class="nav__item">About</a></li>
         <li><a href="blog.html" class="nav__item">Blog</a></li>
-        <li><a href="house-list.html" class="nav__item">House List</a></li>
+        <li><a href="house-list.html" class="nav__item nav__item--active" aria-current="page">House List</a></li>
         <li><a href="our-agent.html" class="nav__item">Our Agent</a></li>
       </ul>
 
@@ -75,18 +75,47 @@
         </div>
 
         <div class="filters__controls">
-          <button type="button" class="filters__pill">
-            Price
-            <img src="assets/images/icons/icon-chevron-caret.svg" alt="" />
-          </button>
-          <button type="button" class="filters__pill">
-            Location
-            <img src="assets/images/icons/icon-chevron-caret.svg" alt="" />
-          </button>
-          <button type="button" class="filters__pill">
-            Type
-            <img src="assets/images/icons/icon-chevron-caret.svg" alt="" />
-          </button>
+          <div class="filters__dropdown" data-open="false">
+            <button type="button" class="filters__pill" aria-haspopup="listbox" aria-expanded="false">
+              <span class="filters__pill-label">Price</span>
+              <img src="assets/images/icons/icon-chevron-caret.svg" alt="" />
+            </button>
+            <div class="filters__dropdown-panel" role="listbox" aria-label="Price">
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="true">Any Price</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Under $500K</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">$500K &ndash; $1M</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">$1M &ndash; $2M</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">$2M+</button>
+            </div>
+          </div>
+
+          <div class="filters__dropdown" data-open="false">
+            <button type="button" class="filters__pill" aria-haspopup="listbox" aria-expanded="false">
+              <span class="filters__pill-label">Location</span>
+              <img src="assets/images/icons/icon-chevron-caret.svg" alt="" />
+            </button>
+            <div class="filters__dropdown-panel" role="listbox" aria-label="Location">
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="true">Any Location</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Cold Spring, NY</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Asheville, NC</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Lake Tahoe, CA</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Boulder, CO</button>
+            </div>
+          </div>
+
+          <div class="filters__dropdown" data-open="false">
+            <button type="button" class="filters__pill" aria-haspopup="listbox" aria-expanded="false">
+              <span class="filters__pill-label">Type</span>
+              <img src="assets/images/icons/icon-chevron-caret.svg" alt="" />
+            </button>
+            <div class="filters__dropdown-panel" role="listbox" aria-label="Type">
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="true">Any Type</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Custom</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Forever Home</button>
+              <button type="button" class="filters__dropdown-option" role="option" aria-selected="false">Mountain Living</button>
+            </div>
+          </div>
+
           <button type="button" class="filters__pill filters__pill--icon-first">
             <img src="assets/images/icons/icon-filter-sliders.svg" alt="" />
             Filter
@@ -97,7 +126,7 @@
 
     <div class="listing-content">
       <div class="listing-grid">
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-01.png" alt="White angular cantilevered modern house on a hillside" />
           </div>
@@ -110,9 +139,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-02.png" alt="Dark modern house with wood-slat accent among trees with autumn foliage" />
           </div>
@@ -125,9 +154,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-03.png" alt="House entrance with a long slatted pergola canopy lit at dusk" />
           </div>
@@ -140,9 +169,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-04.png" alt="Gray gabled house with rooftop solar panels surrounded by pine trees" />
           </div>
@@ -155,9 +184,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-05.png" alt="Gray brick two-story house with wood and glass upper level and a paved driveway" />
           </div>
@@ -170,9 +199,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-06.png" alt="Light-toned modern house with a wood front door alcove at dusk" />
           </div>
@@ -185,9 +214,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-07.png" alt="Gray brick two-story house with wood and glass upper level and a paved driveway" />
           </div>
@@ -200,9 +229,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-08.png" alt="Entrance courtyard with a wood slat wall, stone pillar, and tiled path" />
           </div>
@@ -215,9 +244,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-09.png" alt="Single-story house with a dark metal roof, wood porch beams, and solar panels" />
           </div>
@@ -230,9 +259,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-10.png" alt="Dark modern house with a wood-lined cantilevered roof overlooking a backyard pool" />
           </div>
@@ -245,9 +274,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-11.png" alt="White angular cantilevered modern house on a hillside" />
           </div>
@@ -260,9 +289,9 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
 
-        <article class="listing-card">
+        <a href="house-detail.html" class="listing-card">
           <div class="listing-card__photo">
             <img src="assets/images/listings/listing-12.png" alt="White and tan two-story house with a paved driveway and artificial turf lawn" />
           </div>
@@ -275,31 +304,31 @@
             <span class="listing-chip">Forever Home</span>
             <span class="listing-chip">1,000 - 1,500 Sqpt</span>
           </div>
-        </article>
+        </a>
       </div>
 
       <hr class="listings__divider" />
 
       <nav class="listings-pagination" aria-label="Listing pages">
-        <button type="button" class="listings-pagination__btn listings-pagination__btn--prev">
+        <a href="house-list.html" class="listings-pagination__btn listings-pagination__btn--prev">
           <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" />
           Previous
-        </button>
+        </a>
 
         <div class="listings-pagination__pages">
-          <button type="button" class="listings-pagination__page listings-pagination__page--active" aria-current="page">1</button>
-          <button type="button" class="listings-pagination__page">2</button>
-          <button type="button" class="listings-pagination__page">3</button>
-          <button type="button" class="listings-pagination__page">4</button>
-          <button type="button" class="listings-pagination__page">5</button>
+          <a href="house-list.html" class="listings-pagination__page listings-pagination__page--active" aria-current="page">1</a>
+          <a href="house-list.html" class="listings-pagination__page">2</a>
+          <a href="house-list.html" class="listings-pagination__page">3</a>
+          <a href="house-list.html" class="listings-pagination__page">4</a>
+          <a href="house-list.html" class="listings-pagination__page">5</a>
           <span class="listings-pagination__page listings-pagination__page--ellipsis" aria-hidden="true">...</span>
-          <button type="button" class="listings-pagination__page">25</button>
+          <a href="house-list.html" class="listings-pagination__page">25</a>
         </div>
 
-        <button type="button" class="listings-pagination__btn listings-pagination__btn--next">
+        <a href="house-list.html" class="listings-pagination__btn listings-pagination__btn--next">
           Next
           <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" />
-        </button>
+        </a>
       </nav>
     </div>
   </section>
@@ -313,19 +342,34 @@
       </span>
       <h2 class="partners__heading">Trusted and featured<br />by industry leaders.</h2>
     </div>
-    <ul class="partners__list">
-      <li><img src="assets/images/about/awards/award-logo-archdaily.png" alt="ArchDaily" class="partners__logo" /></li>
-      <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/about/awards/award-logo-wallpaper.png" alt="Wallpaper*" class="partners__logo" /></li>
-      <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/about/awards/award-logo-riba.png" alt="RIBA" class="partners__logo" /></li>
-      <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/about/awards/award-logo-dezeen.png" alt="Dezeen" class="partners__logo" /></li>
-      <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/about/awards/award-logo-designboom.png" alt="Designboom" class="partners__logo" /></li>
-      <li class="partners__divider" aria-hidden="true"></li>
-      <li><img src="assets/images/about/awards/award-logo-architects-journal.png" alt="Architects' Journal" class="partners__logo" /></li>
-    </ul>
+    <div class="partners__marquee">
+      <ul class="partners__list partners__list--track">
+        <li><img src="assets/images/about/awards/award-logo-archdaily.png" alt="ArchDaily" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-wallpaper.png" alt="Wallpaper*" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-riba.png" alt="RIBA" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-dezeen.png" alt="Dezeen" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-designboom.png" alt="Designboom" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-architects-journal.png" alt="Architects' Journal" class="partners__logo" /></li>
+      </ul>
+      <ul class="partners__list partners__list--track" aria-hidden="true">
+        <li><img src="assets/images/about/awards/award-logo-archdaily.png" alt="" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-wallpaper.png" alt="" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-riba.png" alt="" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-dezeen.png" alt="" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-designboom.png" alt="" class="partners__logo" /></li>
+        <li class="partners__divider" aria-hidden="true"></li>
+        <li><img src="assets/images/about/awards/award-logo-architects-journal.png" alt="" class="partners__logo" /></li>
+      </ul>
+    </div>
   </section>
 
   <!-- FAQ -->
@@ -443,20 +487,20 @@
       <div>
         <p class="footer-card__col-label">MENU</p>
         <nav class="footer-card__menu" aria-label="Footer">
-          <a href="index.html#about" class="footer-card__link">About</a>
-          <a href="house-list.html" class="footer-card__link footer-card__link--active">Collection <img src="assets/images/icons/icon-dropdown-active.svg" alt="" /></a>
-          <a href="#" class="footer-card__link">Our Agent</a>
-          <a href="#" class="footer-card__link">Newest</a>
-          <a href="#" class="footer-card__link">Contact</a>
+          <a href="about.html" class="footer-card__link">About</a>
+          <a href="house-list.html" class="footer-card__link footer-card__link--active">House List <img src="assets/images/icons/icon-dropdown-active.svg" alt="" /></a>
+          <a href="our-agent.html" class="footer-card__link">Our Agent</a>
+          <a href="blog.html" class="footer-card__link">Blog</a>
+          <a href="mailto:hello@grov.com" class="footer-card__link">Contact</a>
         </nav>
       </div>
       <div>
         <p class="footer-card__col-label">SOCIAL MEDIA</p>
         <nav class="footer-card__menu" aria-label="Social media">
-          <a href="#" class="footer-card__link">Instagram</a>
-          <a href="#" class="footer-card__link">YouTube</a>
-          <a href="#" class="footer-card__link">Linkedin</a>
-          <a href="#" class="footer-card__link">X (Twitter)</a>
+          <a href="https://instagram.com/" class="footer-card__link" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com/" class="footer-card__link" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com/" class="footer-card__link" target="_blank" rel="noopener">Linkedin</a>
+          <a href="https://x.com/" class="footer-card__link" target="_blank" rel="noopener">X (Twitter)</a>
         </nav>
       </div>
       <div class="footer-card__illustration">
@@ -466,31 +510,19 @@
 
     <div class="footer-card__contact">
       <div class="footer-card__contact-group">
-        <span>+1 292 002 929 2019</span>
-        <span>info@real.estate</span>
-      </div>
-      <div class="footer-card__contact-group">
-        <span>+1 292 002 929 2019</span>
-        <span>Help Center</span>
+        <a href="tel:+12920029292019">+1 292 002 929 2019</a>
+        <a href="mailto:info@grov.estate">info@grov.estate</a>
       </div>
     </div>
 
-    <a href="#" class="btn btn--dark">
+    <a href="mailto:hello@grov.com" class="btn btn--dark">
       <span class="btn__label">Get a Quote</span>
       <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
     </a>
   </div>
-
-  <div class="site-footer__bottom">
-    <span>Privacy policy</span>
-    <img src="assets/images/icons/icon-dot-separator.svg" alt="" class="site-footer__bottom-dot" />
-    <span>Terms &amp; condition</span>
-    <img src="assets/images/icons/icon-dot-separator.svg" alt="" class="site-footer__bottom-dot" />
-    <span>Crafted by Rel Estate</span>
-  </div>
 </footer>
 
 <script src="assets/js/vendor/gsap.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

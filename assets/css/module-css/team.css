@@ -23,20 +23,6 @@
   flex-wrap: wrap;
 }
 
-.team__counter {
-  font-family: var(--font-mono);
-  font-size: var(--fs-eyebrow);
-}
-
-.team__controls {
-  display: flex;
-  gap: var(--space-xs);
-}
-
-.team__controls .btn--outline:first-child img {
-  transform: rotate(180deg);
-}
-
 .team__heading {
   font-family: var(--font-serif);
   font-size: var(--fs-h2);

@@ -128,7 +128,7 @@
   }
 
   /* ---- Testimonials ---- */
-  .testimonials__body,
+  .testimonials__slide,
   .testimonials__content {
     flex-direction: column;
     gap: var(--space-xl);
@@ -269,11 +269,14 @@
   }
 
   .hero__title {
-    top: 24px;
+    top: 50%;
+    transform: translate(-50%, calc(-100% - 12px));
   }
 
   .hero__cta {
-    bottom: 160px;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, 12px);
   }
 
   .hero__thumb {
@@ -281,10 +284,7 @@
   }
 
   .hero__caption {
-    left: 24px;
-    right: 24px;
-    width: auto;
-    bottom: 24px;
+    display: none;
   }
 
   /* ---- About ---- */
@@ -307,6 +307,11 @@
   }
 
   /* ---- Collection cards ---- */
+  .collection__cards {
+    margin-inline: -20px;
+    padding-inline: 20px;
+  }
+
   .collection-card {
     flex: 0 0 82vw;
   }
@@ -319,6 +324,10 @@
   .testimonials__top {
     flex-wrap: wrap;
     gap: var(--space-md);
+  }
+
+  .testimonials__top .eyebrow {
+    flex-basis: 100%;
   }
 
   .testimonials__quote {
@@ -343,6 +352,10 @@
   }
 
   /* ---- Insights ---- */
+  .mobile-break {
+    display: inline;
+  }
+
   .insights__cards {
     flex-direction: column;
   }
@@ -375,12 +388,6 @@
     gap: var(--space-xl);
   }
 
-  .site-footer__bottom {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    width: calc(100% - 32px);
-  }
 
   /* ---- Agent Hero ---- */
   .agent-hero__frame {
@@ -392,6 +399,10 @@
   .values__item {
     flex-direction: column;
     gap: var(--space-sm);
+  }
+
+  .values__item-desc {
+    flex-basis: auto;
   }
 
   /* ---- Manifesto ---- */
@@ -433,9 +444,14 @@
   }
 
   /* ---- Pagination ---- */
+  .listings-pagination {
+    justify-content: center;
+  }
+
   .listings-pagination__pages {
-    order: 3;
+    order: 1;
     width: 100%;
+    justify-content: center;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -446,6 +462,7 @@
   }
 
   .listings-pagination__btn {
+    order: 2;
     flex: 1 1 auto;
     justify-content: center;
   }
@@ -502,14 +519,6 @@
     flex-direction: column;
   }
 
-  .agents__grid {
-    flex-wrap: wrap;
-  }
-
-  .agent-card {
-    flex: 1 1 calc(50% - var(--space-xl));
-  }
-
   .property-headline__floating {
     display: none;
   }
@@ -545,8 +554,7 @@
     padding: var(--space-xl);
   }
 
-  .philosophy,
-  .agents {
+  .philosophy {
     padding-inline: 0;
   }
 
@@ -561,6 +569,7 @@
 
   .philosophy__row-2col {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .philosophy__photo--single {
@@ -604,16 +613,11 @@
     padding-inline: var(--container-pad);
   }
 
-  .agents {
-    padding-inline: var(--container-pad);
+  .preconstruction__title {
+    text-align: left;
   }
 
-  .agents__grid {
-    flex-direction: column;
-  }
-
-  .agent-card--tall .agent-card__photo,
-  .agent-card--short .agent-card__photo {
+  .agent-card__photo {
     height: 420px;
   }
 
@@ -641,8 +645,16 @@
    ========================================================================== */
 @media (max-width: 1024px) {
   .blog-hero {
-    flex-direction: column;
     height: auto;
+  }
+
+  .blog-hero__track,
+  .blog-hero__slide {
+    height: auto;
+  }
+
+  .blog-hero__slide {
+    flex-direction: column;
   }
 
   .blog-hero__photo {
@@ -757,19 +769,47 @@
   }
 
   .pagination__pages {
-    order: 3;
+    order: 1;
     width: 100%;
     justify-content: center;
   }
 
-  .footer-card--compact {
-    min-width: 0;
-    width: calc(100vw - 32px);
+  .pagination__nav {
+    order: 2;
   }
 
-  .site-footer__key {
+}
+
+/* ==========================================================================
+   Detail pages (Blog / House) — Tablet (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .property-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .property-overview__actions {
+    flex-direction: row;
+  }
+
+  .article-hero__photo {
+    height: 400px;
+  }
+}
+
+/* ==========================================================================
+   Detail pages (Blog / House) — Mobile (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .property-overview__actions {
     flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm);
+  }
+
+  .article-hero__photo {
+    height: 280px;
+  }
+
+  .article-header__meta {
+    flex-wrap: wrap;
   }
 }

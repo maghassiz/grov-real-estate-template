@@ -3,37 +3,37 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About Us — RealEstate</title>
+<title>About Us — Grov</title>
 <meta name="description" content="Helping you make confident property decisions. Learn about our philosophy, track record, agents, and what matters most in every property we offer." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/variables.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css?v=4" />
 <link rel="stylesheet" href="assets/css/module-css/about-hero.css" />
-<link rel="stylesheet" href="assets/css/module-css/philosophy.css" />
-<link rel="stylesheet" href="assets/css/module-css/awards.css" />
+<link rel="stylesheet" href="assets/css/module-css/philosophy.css?v=2" />
+<link rel="stylesheet" href="assets/css/module-css/awards.css?v=2" />
 <link rel="stylesheet" href="assets/css/module-css/key-considerations.css" />
 <link rel="stylesheet" href="assets/css/module-css/gallery-grid.css" />
 <link rel="stylesheet" href="assets/css/module-css/pre-construction.css" />
-<link rel="stylesheet" href="assets/css/module-css/agents-showcase.css" />
+<link rel="stylesheet" href="assets/css/module-css/team.css" />
 <link rel="stylesheet" href="assets/css/module-css/property-headline.css" />
-<link rel="stylesheet" href="assets/css/module-css/our-collection.css" />
+<link rel="stylesheet" href="assets/css/module-css/our-collection.css?v=2" />
 <link rel="stylesheet" href="assets/css/module-css/cta-cards.css" />
-<link rel="stylesheet" href="assets/css/responsive.css" />
+<link rel="stylesheet" href="assets/css/responsive.css?v=4" />
 </head>
 <body>
 
 <header class="site-header" data-nav-open="false">
   <nav class="nav container" aria-label="Primary">
-    <a href="index.html" class="nav__logo" aria-label="RealEstate home">
+    <a href="index.html" class="nav__logo" aria-label="Grov home">
       <img src="assets/images/icons/logo-mark.svg" alt="" class="nav__logo-mark" />
-      <span class="nav__logo-text">RealEstate</span>
+      <span class="nav__logo-text">Grov</span>
     </a>
 
     <div class="nav__drawer" id="primary-menu">
       <ul class="nav__menu">
-        <li><a href="about.html" class="nav__item">About</a></li>
+        <li><a href="about.html" class="nav__item nav__item--active" aria-current="page">About</a></li>
         <li><a href="blog.html" class="nav__item">Blog</a></li>
         <li><a href="house-list.html" class="nav__item">House List</a></li>
         <li><a href="our-agent.html" class="nav__item">Our Agent</a></li>
@@ -284,82 +284,205 @@
     </div>
   </section>
 
-  <!-- Our Agents -->
-  <section class="agents" aria-label="Our agents" data-reveal>
-    <div class="agents__nav">
-      <div class="agents__divider"></div>
-      <div class="agents__nav-row">
-        <span class="eyebrow">
-          <img src="assets/images/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
-          LUXURY RESIDENTIAL
-        </span>
-        <span class="agents__counter">01 / 05</span>
-        <div class="agents__controls">
-          <button type="button" class="btn--outline" aria-label="Previous agent">
-            <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" />
-          </button>
-          <button type="button" class="btn--outline" aria-label="Next agent">
-            <img src="assets/images/icons/icon-arrow-prev-next.svg" alt="" />
-          </button>
-        </div>
-      </div>
+  <!-- Team -->
+  <section class="team" data-reveal>
+    <div class="team__nav">
+      <span class="eyebrow eyebrow--upper">
+        <img src="assets/images/icons/icon-bullet.svg" alt="" class="eyebrow__icon" />
+        Luxury Residential
+      </span>
     </div>
 
-    <h2 class="agents__heading">Our Agents</h2>
+    <h2 class="team__heading">Our Agents</h2>
 
-    <div class="agents__grid">
-      <article class="agent-card agent-card--tall">
-        <div class="agent-card__photo">
-          <img src="assets/images/about/agents/agent-william-carter.png" alt="Portrait of William Carter" />
+    <div class="team__grid">
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-1.png" alt="Portrait of Alexander Brooks" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Alexander Brooks</p>
+          <p class="agent-card__role">FOUNDER, REAL ESTATE</p>
         </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Alexander Brooks on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Alexander Brooks on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-2.png" alt="Portrait of Charlotte Bennett" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Charlotte Bennett</p>
+          <p class="agent-card__role">Investment Consultant</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Charlotte Bennett on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Charlotte Bennett on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <div class="agent-card agent-card--placeholder" aria-hidden="true"></div>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-4.png" alt="Portrait of William Carter" /></div>
         <div class="agent-card__label">
           <p class="agent-card__name">William Carter</p>
           <p class="agent-card__role">Lead Property Advisor</p>
-          <div class="agent-card__social">
-            <img src="assets/images/icons/icon-social-linkedin.svg" alt="LinkedIn" />
-            <img src="assets/images/icons/icon-social-x.svg" alt="X (Twitter)" />
-          </div>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="William Carter on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="William Carter on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
         </div>
       </article>
-      <article class="agent-card agent-card--short">
-        <div class="agent-card__photo">
-          <img src="assets/images/about/agents/agent-benjamin-turner.png" alt="Portrait of Benjamin Turner" />
+
+      <div class="agent-card agent-card--placeholder" aria-hidden="true"></div>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-5.png" alt="Portrait of Sophia Mitchell" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Sophia Mitchell</p>
+          <p class="agent-card__role">Sr. Property Consultant</p>
         </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Sophia Mitchell on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Sophia Mitchell on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-6.png" alt="Portrait of Benjamin Turner" /></div>
         <div class="agent-card__label">
           <p class="agent-card__name">Benjamin Turner</p>
           <p class="agent-card__role">Investment Consultant</p>
-          <div class="agent-card__social">
-            <img src="assets/images/icons/icon-social-linkedin.svg" alt="LinkedIn" />
-            <img src="assets/images/icons/icon-social-x.svg" alt="X (Twitter)" />
-          </div>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Benjamin Turner on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Benjamin Turner on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
         </div>
       </article>
-      <article class="agent-card agent-card--tall">
-        <div class="agent-card__photo">
-          <img src="assets/images/about/agents/agent-henry-collins.png" alt="Portrait of Henry Collins" />
-        </div>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-7.png" alt="Portrait of Amelia Foster" /></div>
         <div class="agent-card__label">
-          <p class="agent-card__name">Henry Collins</p>
-          <p class="agent-card__role">Commercial Consultant</p>
-          <div class="agent-card__social">
-            <img src="assets/images/icons/icon-social-linkedin.svg" alt="LinkedIn" />
-            <img src="assets/images/icons/icon-social-x.svg" alt="X (Twitter)" />
-          </div>
+          <p class="agent-card__name">Amelia Foster</p>
+          <p class="agent-card__role">Property Specialist</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Amelia Foster on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Amelia Foster on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
         </div>
       </article>
-      <article class="agent-card agent-card--short">
-        <div class="agent-card__photo">
-          <img src="assets/images/about/agents/agent-olivia-hayes.png" alt="Portrait of Olivia Hayes" />
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-8.png" alt="Portrait of James Walker" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">James Walker</p>
+          <p class="agent-card__role">Sr. Property Consultant</p>
         </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="James Walker on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="James Walker on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <div class="agent-card agent-card--placeholder" aria-hidden="true"></div>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-9.png" alt="Portrait of Olivia Hayes" /></div>
         <div class="agent-card__label">
           <p class="agent-card__name">Olivia Hayes</p>
           <p class="agent-card__role">Real Estate Consultant</p>
-          <div class="agent-card__social">
-            <img src="assets/images/icons/icon-social-linkedin.svg" alt="LinkedIn" />
-            <img src="assets/images/icons/icon-social-x.svg" alt="X (Twitter)" />
-          </div>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Olivia Hayes on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Olivia Hayes on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
         </div>
       </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-10.png" alt="Portrait of Henry Collins" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Henry Collins</p>
+          <p class="agent-card__role">Commercial Consultant</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Henry Collins on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Henry Collins on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <div class="agent-card agent-card--placeholder" aria-hidden="true"></div>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-1.png" alt="Portrait of Emily Parker" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Emily Parker</p>
+          <p class="agent-card__role">Real Estate Consultant</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Emily Parker on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Emily Parker on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-11.png" alt="Portrait of Daniel Hughes" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Daniel Hughes</p>
+          <p class="agent-card__role">Property Advisor</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Daniel Hughes on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Daniel Hughes on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-12.png" alt="Portrait of Grace Morgan" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Grace Morgan</p>
+          <p class="agent-card__role">Commercial Consultant</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Grace Morgan on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Grace Morgan on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-4.png" alt="Portrait of Lucas Bennett" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Lucas Bennett</p>
+          <p class="agent-card__role">Property Advisor</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Lucas Bennett on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Lucas Bennett on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card">
+        <div class="agent-card__photo"><img src="assets/images/agents/agent-10.png" alt="Portrait of Isabella Reed" /></div>
+        <div class="agent-card__label">
+          <p class="agent-card__name">Isabella Reed</p>
+          <p class="agent-card__role">Sr. Property Consultant</p>
+        </div>
+        <div class="agent-card__socials">
+          <a href="#" aria-label="Isabella Reed on LinkedIn"><img src="assets/images/icons/icon-social-linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Isabella Reed on X"><img src="assets/images/icons/icon-social-x.svg" alt="" /></a>
+        </div>
+      </article>
+
+      <article class="agent-card agent-card--cta">
+        <p class="agent-card__cta-label">JOIN THE TEAM</p>
+        <p class="agent-card__cta-heading">Want to shape the future of real estate?</p>
+        <p class="agent-card__cta-desc">Join a team that values expertise, integrity, and long-term impact. Help clients make confident property decisions and build meaningful outcomes.</p>
+        <a href="mailto:careers@grov.estate" class="btn btn--dark agent-card__cta-btn">
+          <span class="btn__label">Explore Careers</span>
+          <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
+        </a>
+      </article>
+
+      <div class="agent-card agent-card--placeholder" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -398,7 +521,7 @@
     </div>
 
     <div class="collection__cards">
-      <article class="collection-card">
+      <a href="house-detail.html" class="collection-card">
         <div class="collection-card__photo">
           <img src="assets/images/collections/collection-1.png" alt="Tan cabin-style house with landscaped garden path" />
           <div class="collection-card__tags">
@@ -408,9 +531,9 @@
         </div>
         <h3 class="collection-card__title">Compact Living Home</h3>
         <p class="collection-card__desc">A smartly designed home that maximizes space efficiency while maintaining comfort and everyday functionality.</p>
-      </article>
+      </a>
 
-      <article class="collection-card">
+      <a href="house-detail.html" class="collection-card">
         <div class="collection-card__photo">
           <img src="assets/images/collections/collection-2.png" alt="Architectural line illustration of a minimalist house" />
           <div class="collection-card__tags">
@@ -420,9 +543,9 @@
         </div>
         <h3 class="collection-card__title">Minimalist House</h3>
         <p class="collection-card__desc">Clean lines and open spaces create a calm, modern home focused on simplicity, clarity, and effortless living.</p>
-      </article>
+      </a>
 
-      <article class="collection-card">
+      <a href="house-detail.html" class="collection-card">
         <div class="collection-card__photo">
           <img src="assets/images/collections/collection-3.png" alt="White modern cabin with palm trees and floor-to-ceiling windows" />
           <div class="collection-card__tags">
@@ -432,9 +555,9 @@
         </div>
         <h3 class="collection-card__title">Modern Cabin</h3>
         <p class="collection-card__desc">A contemporary retreat that blends natural surroundings with modern comfort, offering a warm and relaxing living experience.</p>
-      </article>
+      </a>
 
-      <article class="collection-card">
+      <a href="house-detail.html" class="collection-card">
         <div class="collection-card__photo">
           <img src="assets/images/collections/collection-4.png" alt="Secluded modern retreat surrounded by nature" />
           <div class="collection-card__tags">
@@ -444,7 +567,7 @@
         </div>
         <h3 class="collection-card__title">Modern Cabin</h3>
         <p class="collection-card__desc">Designed as a peaceful escape, this home balances privacy, comfort, and modern aesthetics in every detail.</p>
-      </article>
+      </a>
     </div>
   </section>
 
@@ -453,19 +576,19 @@
     <div class="cta-card">
       <div class="cta-card__text">
         <h3 class="cta-card__title">Work with us</h3>
-        <p class="cta-card__desc">Join our team and help people find right place call home.</p>
+        <p class="cta-card__desc">Join our team and help people find the right place to call home.</p>
       </div>
-      <a href="#" class="btn btn--light">
+      <a href="mailto:careers@grov.estate" class="btn btn--light">
         <span class="btn__label">See Open Role</span>
         <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
       </a>
     </div>
     <div class="cta-card">
       <div class="cta-card__text">
-        <h3 class="cta-card__title">Read more about us</h3>
-        <p class="cta-card__desc">Discover our story, the approach behind every property we offer.</p>
+        <h3 class="cta-card__title">Meet Our Agents</h3>
+        <p class="cta-card__desc">Get to know the advisors behind every property we offer.</p>
       </div>
-      <a href="#" class="btn btn--light">
+      <a href="our-agent.html" class="btn btn--light">
         <span class="btn__label">Learn more</span>
         <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
       </a>
@@ -484,19 +607,19 @@
         <p class="footer-card__col-label">MENU</p>
         <nav class="footer-card__menu" aria-label="Footer">
           <a href="about.html" class="footer-card__link footer-card__link--active">About <img src="assets/images/icons/icon-dropdown-active.svg" alt="" /></a>
-          <a href="#" class="footer-card__link">Collection</a>
-          <a href="#" class="footer-card__link">Our Agent</a>
-          <a href="#" class="footer-card__link">Newest</a>
-          <a href="#" class="footer-card__link">Contact</a>
+          <a href="house-list.html" class="footer-card__link">House List</a>
+          <a href="our-agent.html" class="footer-card__link">Our Agent</a>
+          <a href="blog.html" class="footer-card__link">Blog</a>
+          <a href="mailto:hello@grov.com" class="footer-card__link">Contact</a>
         </nav>
       </div>
       <div>
         <p class="footer-card__col-label">SOCIAL MEDIA</p>
         <nav class="footer-card__menu" aria-label="Social media">
-          <a href="#" class="footer-card__link">Instagram</a>
-          <a href="#" class="footer-card__link">YouTube</a>
-          <a href="#" class="footer-card__link">Linkedin</a>
-          <a href="#" class="footer-card__link">X (Twitter)</a>
+          <a href="https://instagram.com/" class="footer-card__link" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com/" class="footer-card__link" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://linkedin.com/" class="footer-card__link" target="_blank" rel="noopener">Linkedin</a>
+          <a href="https://x.com/" class="footer-card__link" target="_blank" rel="noopener">X (Twitter)</a>
         </nav>
       </div>
       <div class="footer-card__illustration">
@@ -506,31 +629,19 @@
 
     <div class="footer-card__contact">
       <div class="footer-card__contact-group">
-        <span>+1 292 002 929 2019</span>
-        <span>info@real.estate</span>
-      </div>
-      <div class="footer-card__contact-group">
-        <span>+1 292 002 929 2019</span>
-        <span>Help Center</span>
+        <a href="tel:+12920029292019">+1 292 002 929 2019</a>
+        <a href="mailto:info@grov.estate">info@grov.estate</a>
       </div>
     </div>
 
-    <a href="#" class="btn btn--dark">
+    <a href="mailto:hello@grov.com" class="btn btn--dark">
       <span class="btn__label">Get a Quote</span>
       <span class="btn__icon"><img src="assets/images/icons/icon-arrow-right.svg" alt="" /></span>
     </a>
   </div>
-
-  <div class="site-footer__bottom">
-    <span>Privacy policy</span>
-    <img src="assets/images/icons/icon-dot-separator.svg" alt="" class="site-footer__bottom-dot" />
-    <span>Terms &amp; condition</span>
-    <img src="assets/images/icons/icon-dot-separator.svg" alt="" class="site-footer__bottom-dot" />
-    <span>Crafted by Rel Estate</span>
-  </div>
 </footer>
 
 <script src="assets/js/vendor/gsap.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

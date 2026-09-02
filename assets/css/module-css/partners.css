@@ -21,7 +21,7 @@
 .partners__heading {
   font-family: var(--font-serif);
   font-size: var(--fs-h3);
-  line-height: 64px;
+  line-height: var(--lh-heading);
 }
 
 .partners__marquee {
